@@ -5,13 +5,15 @@ from PyQt5.QtWidgets import QApplication, QVBoxLayout, QWidget, QLineEdit
 class Browser(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("PyQt5 Web Browser")
+        self.setWindowTitle("Simple Web Browser")
 
         # Create a QWebEngineView widget
         self.view = QWebEngineView(self)
 
         # Create a QLineEdit for the URL bar
         self.url_bar = QLineEdit(self)
+        self.url_bar.setPlaceholderText("https://")
+
         self.url_bar.returnPressed.connect(self.load_url)
 
         # Create a QVBoxLayout
