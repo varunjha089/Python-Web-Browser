@@ -29,6 +29,17 @@ class Browser(QWidget):
         # Load a website
         self.view.load(QUrl("https://www.google.com"))
 
+        # larger border
+        self.url_bar.setMinimumWidth(500)
+        self.url_bar.setMinimumHeight(40)
+
+        # rounded border
+        self.url_bar.setStyleSheet("""QLineEdit {
+                                      border-radius: 20px;
+                                      border: 2px solid gray;
+                                  }""")
+
+
         self.show()
 
     def load_url(self):
