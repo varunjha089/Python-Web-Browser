@@ -37,6 +37,11 @@ class Browser(QWidget):
         self.url_bar.setStyleSheet("""QLineEdit {
                                       border-radius: 20px;
                                       border: 2px solid gray;
+                                      background: qlineargradient(
+                                        spread:pad, x1:0, y1:0, x2:1, y2:0, 
+                                        stop:0 rgba(173, 216, 230, 255),
+                                        stop:1 rgba(144, 238, 144, 255)
+                                        );
                                   }""")
 
 
